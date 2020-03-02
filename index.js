@@ -8,7 +8,9 @@ const devDeps = function(cwd) {
 
   console.log(chalk.green('即将安装 devDependencies，只支持 Yarn 工具。'));
   console.log(chalk.green(`安装目录为：${nodeModulesPath}`));
-  execa.commandSync(`cd ${__dirname} && yarn install --no-lockfile --ignore-scripts --modules-folder ${nodeModulesPath}`)
+  execa.sync('cd', [__dirname]);
+  execa.sync('yarn', ['install', '--no-lockfile', '--ignore-scripts', '--modules-folder', nodeModulesPath])
+    .stdout.pipe(process.stdout)
 };
 
 module.exports = devDeps;
