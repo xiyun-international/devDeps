@@ -1,24 +1,17 @@
-const execa = require('execa');
-const json = require('./package.json');
+const execa = require("execa");
+const chalk = require("chalk");
+const { join } = require("path");
 
-// console.log(Object.keys(json.devDependencies));
-const devDeps = Object.keys(json.devDependencies).join(' ');
-const subprocess = execa('yarn', ['add', devDeps]);
-subprocess.stdout.pipe(process.stdout);
+const devDeps = function(cwd) {
+  console.log(chalk.green('即将安装 devDependencies，只支持 Yarn 工具。'));
+  const path = cwd || process.cwd();
+  const subprocess = execa("yarn", [
+    "install",
+    "--modules-folder",
+    join(path, "node_modules")
+  ]);
+  subprocess.stdout.pipe(process.stdout);
+};
+devDeps();
 
-// const commands = Object.keys(json.devDependencies).map(pkg => {
-//   const subprocess = execa('yarn', ['add', pkg, '-D']);
-//   subprocess.stdout.pipe(process.stdout);
-//   return subprocess;
-// });
-// Promise.all(commands);
-
-// module.exports = function () {
-//   const pkgs = ().map(
-//     name => require(join(__dirname, '../packages', name, 'package.json')).name,
-//   );
-//   execa("echo", ['unicorns']).then(res => {
-//     console.log('wubaiqing');
-//     console.log(result.stdout);
-//   })
-// }
+module.exports = devDeps;

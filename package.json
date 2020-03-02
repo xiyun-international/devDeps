@@ -1,6 +1,6 @@
 {
   "name": "@xiyun/dev-deps",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "repository": "https://github.com/xiyun-international/devDeps.git",
   "author": "wubaiqing (琉璃) <wubaiqing@vip.qq.com>",
   "license": "MIT",
@@ -8,8 +8,16 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "index.js",
+    "package.json",
+    "LICENSE",
+    "yarn.lock"
+  ],
   "dependencies": {
-    "execa": "^4.0.0"
+    "chalk": "^3.0.0",
+    "execa": "^4.0.0",
+    "pkg-up": "^3.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
