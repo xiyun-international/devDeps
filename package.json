@@ -1,6 +1,6 @@
 {
   "name": "@xiyun/dev-deps",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "repository": "https://github.com/xiyun-international/devDeps.git",
   "author": "wubaiqing (琉璃) <wubaiqing@vip.qq.com>",
   "license": "MIT",
@@ -16,8 +16,7 @@
   ],
   "dependencies": {
     "chalk": "^3.0.0",
-    "execa": "^4.0.0",
-    "pkg-up": "^3.1.0"
+    "execa": "^4.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
