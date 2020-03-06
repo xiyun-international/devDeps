@@ -16,9 +16,7 @@
   ],
   "dependencies": {
     "chalk": "^3.0.0",
-    "execa": "^4.0.0"
-  },
-  "devDependencies": {
+    "execa": "^4.0.0",
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
     "@vue/cli-plugin-babel": "^3.5.0",
@@ -40,5 +38,8 @@
     "stylelint": "^9.10.1",
     "stylelint-webpack-plugin": "^0.10.5",
     "vue-template-compiler": "^2.6.9"
+  },
+  "devDependencies": {
+    
   }
 }
