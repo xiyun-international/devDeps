@@ -1,6 +1,6 @@
 {
   "name": "@xiyun/dev-deps",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "repository": "https://github.com/xiyun-international/devDeps.git",
   "author": "wubaiqing (琉璃) <wubaiqing@vip.qq.com>",
   "license": "MIT",
@@ -39,7 +39,5 @@
     "stylelint-webpack-plugin": "^0.10.5",
     "vue-template-compiler": "^2.6.9"
   },
-  "devDependencies": {
-    
-  }
+  "devDependencies": {}
 }
